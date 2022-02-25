@@ -16,10 +16,10 @@ find /home /media -iname '*.mp3' > playlist.m3u 2>/dev/null;
 
 function installplayer() {
 	#Check if selected player is installed
-	if [ ! -f /usr/bin/$player ];
+	if [ ! -f /usr/bin/"$player" ];
 	then
 		echo "$player isn't installed, installing..";
-		sudo apt install $player;
+		sudo apt install "$player";
 	fi;
 }
 
