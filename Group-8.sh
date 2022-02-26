@@ -12,6 +12,9 @@ read -p "Enter 1 if to install/play using audacious or 2 to use mplayer" player
 function scan() {
 #Scan /home and /media for mp3s and output it to playlist.m3u, and redirect errors to /dev/null
 find /home /media -iname '*.mp3' -print > playlist.m3u 2>/dev/null;
+
+#Cat the playlist
+cat playlist.m3u; 
 }
 
 function installplayer() {
